@@ -1,0 +1,13 @@
+version: "2"
+
+volumes:
+  db: {}
+
+services: 
+  web:
+    build: .
+  db:
+    image: postgres:9.6.5
+    volumes: 
+    - db:/var/lib/postgresql/data
+    
