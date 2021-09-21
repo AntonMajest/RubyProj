@@ -5,11 +5,11 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7.0
+      - image: circleci/ruby:2.6.3-stretch-node
     executor: ruby/default
     steps:
       - checkout
       - run:
-          name: 2.1.4
+          name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
